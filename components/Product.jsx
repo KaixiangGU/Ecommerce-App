@@ -13,7 +13,8 @@ function Product({ product: { image, name, price, slug } }) {
             width={250}
             height={250}
             className="product-image"
-          ></img>
+            alt={`${name} picture`}
+          />
           <p className="product-name">{name}</p>
           <p className="product-price">${price}</p>
         </div>

@@ -70,7 +70,11 @@ function Cart() {
           {cartItems.length >= 1 &&
             cartItems.map((cartItem, index) => (
               <div className="product" key={cartItem._id}>
-                <img src={urlFor(cartItem?.image[0])} className="cart-product-image" />
+                <img
+                  src={urlFor(cartItem?.image[0])}
+                  className="cart-product-image"
+                  alt={`${cartItem.name} picture`}
+                />
                 <div className="item-desc">
                   <div className="flex top">
                     <h5>{cartItem.name}</h5>

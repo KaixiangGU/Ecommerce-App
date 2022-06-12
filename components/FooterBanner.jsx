@@ -34,7 +34,7 @@ function FooterBanner({
             <button type="button">{buttonText}</button>
           </Link>
         </div>
-        <img src={urlFor(image)} className="footer-banner-image"></img>
+        <img src={urlFor(image)} className="footer-banner-image" alt="headphones" />
       </div>
     </div>
   );
