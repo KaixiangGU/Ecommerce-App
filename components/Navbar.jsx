@@ -16,18 +16,21 @@ function Navbar() {
     setTotalPrice,
   } = useStateContext();
 
-  // useEffect(() => {
-  //   const localCartItem = JSON.parse(localStorage.getItem("cart_items") || "[]");
-  //   setCartItems(localCartItem);
-  //   localCartItem.map((item) => {
-  //     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + item.quantity);
-  //     setTotalPrice((prevTotalPrice) => prevTotalPrice + item.price * item.quantity);
-  //   });
-  // }, []);
+  useEffect(() => {
+    const localCartItem = JSON.parse(localStorage.getItem("cart_items") || "[]");
+    console.log(localCartItem);
+    if (localCartItem != null) {
+      setCartItems(localCartItem);
+      localCartItem.map((item) => {
+        setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + item.quantity);
+        setTotalPrice((prevTotalPrice) => prevTotalPrice + item.price * item.quantity);
+      });
+    }
+  }, []);
 
-  // useEffect(() => {
-  //   localStorage.setItem("cart_items", JSON.stringify(cartItems));
-  // }, [cartItems]);
+  useEffect(() => {
+    localStorage.setItem("cart_items", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   return (
     <div className="navbar-container">
