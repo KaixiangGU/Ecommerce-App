@@ -15,7 +15,6 @@ export const StateContext = ({ children }) => {
   const onAdd = (product, quantity) => {
     //check whether chosen product is in shopping cart
     const checkProductInCart = cartItems.find((cartItem) => cartItem._id === product._id);
-
     //update shopping cart total price
     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
 
@@ -24,11 +23,12 @@ export const StateContext = ({ children }) => {
 
     if (checkProductInCart) {
       const updatedCartItems = cartItems.map((cartItem) => {
-        if (cartItem._id === product.id)
+        if (cartItem._id === product._id) {
           return {
             ...cartItem,
             quantity: cartItem.quantity + quantity,
           };
+        }
       });
       setCartItems(updatedCartItems);
     } else {
@@ -36,7 +36,6 @@ export const StateContext = ({ children }) => {
       setCartItems([...cartItems, { ...product }]);
     }
     toast.success(`${qty} ${product.name} added to the cart`);
-    console.log(product);
   };
 
   //increase quantity on shopping cart page

@@ -44,6 +44,7 @@ function Cart() {
     }
   };
 
+  console.log(cartItems);
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
@@ -73,7 +74,7 @@ function Cart() {
                 <img
                   src={urlFor(cartItem?.image[0])}
                   className="cart-product-image"
-                  alt={`${cartItem.name} picture`}
+                  alt={`picture`}
                 />
                 <div className="item-desc">
                   <div className="flex top">
