@@ -1,4 +1,59 @@
+# Ecommerce App
+
+## About Project
+
+This is a full stack ecommerce app with Stripe & Sanity and deployed with vercel. [See Live Version](https://ecommerce-7r14981sb-kaixianggu.vercel.app/)
+
+### Built With
+
+- Next.js
+- React.js
+- Sanity
+- Stripe
+
+### Key Features
+
+##### Product details page
+
+Add product to shooping cart. When click Buy Now button, shopping cart page will pop up with the quantities you selected.
+
+##### Shopping cart
+
+You may toggle quantities or remove products on shopping cart page. Total price and total quantities will also get updated.
+
+##### Pay with Stripe
+
+The payment API that I used for this website is Stripe. Customers will be redirected to checkout page.
+
+##### Local Storage
+
+You won't lose your shopping cart products after refresh the website.
+
+## What I learnt
+
+Before I started this project, I was tried to implement key functionalities that will be used in this project (eg: Create checkout session, connect with Sanity, Context API).
+
+- File based routing, pages in Next.JS are associated with a route based on their file name.
+- Context API, share data or state through components without pass down every level.
+- Stripe, create a checkout session and POST products data with fetch API, and redirect to checkout page that provided by Sripe.
+- Sanity, how to create schemas for this particular project and how to fetch data from Sanity Client.
+- Others, localStorage, conditional rendering, useState, useEffect, deconstruct etc.
+
 ## Getting Started
+
+### Usage
+
+1. Clone the Repo
+
+```bash
+git clone https://github.com/KaixiangGU/Ecommerce-App.git
+```
+
+2. Install NPM packages
+
+```bash
+npm install
+```
 
 First, run the development server:
 
@@ -9,9 +64,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
