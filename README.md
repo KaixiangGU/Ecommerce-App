@@ -2,7 +2,11 @@
 
 ## About Project
 
-This is a full stack ecommerce app with Stripe & Sanity and deployed with vercel. [See Live Version](https://ecommerce-7r14981sb-kaixianggu.vercel.app/)
+This is a full stack ecommerce app with Stripe & Sanity and deployed with vercel. **[See Live Version](https://ecommerce-7r14981sb-kaixianggu.vercel.app/)**
+
+![Index page](assets/screenshots/FireShot%20Capture%20001%20-%20Kevin%20's%20ecommerce%20store%20-%20localhost.png "Optional Title")
+![product page](assets/screenshots/FireShot%20Capture%20004%20-%20Kevin%20's%20ecommerce%20store%20-%20localhost.png)
+![checkout page](assets/screenshots/FireShot%20Capture%20005%20-%20Kevin%20Gu%20-%20checkout.stripe.com.png)
 
 ### Built With
 
